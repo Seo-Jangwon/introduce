@@ -4,8 +4,8 @@ import React from "react";
 const Wish = () => {
   return (
     <div>
-      <h1>Wish Page</h1>
-      <p>This is the Wish page.</p>
+      <h1>저는</h1>
+      <h2>백엔드 위주로 하고싶습니다.</h2>
     </div>
   );
 };
