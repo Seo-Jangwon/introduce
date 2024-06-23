@@ -1,14 +1,16 @@
 import "./App.css";
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Intro from "./components/Intro/Intro";
 import Nav from "./components/Nav/Nav";
 import About from "./components/About/About";
 import WhatCanIDo from "./components/WhatCanIDo/WhatCanIDo";
 import Wish from "./components/Wish/Wish";
 
+const basename = process.env.NODE_ENV === "production" ? "/introduce/sjw" : "";
+
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={basename}>
       <div className="App">
         <div className="content">
           <Routes>
