@@ -45,7 +45,7 @@ const About = () => {
           }}
         >
           <FaLink />
-          &nbsp; 블로그 &nbsp;
+          &nbsp; 블로그 (클릭) &nbsp;
           <FaLink />
         </h3>
       </div>
