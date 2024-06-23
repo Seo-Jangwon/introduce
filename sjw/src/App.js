@@ -1,3 +1,4 @@
+// App.js
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Intro from "./components/Intro/Intro";
@@ -6,9 +7,11 @@ import About from "./components/About/About";
 import WhatCanIDo from "./components/WhatCanIDo/WhatCanIDo";
 import Wish from "./components/Wish/Wish";
 
+const basename = process.env.NODE_ENV === "production" ? "/introduce/sjw" : "";
+
 function App() {
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="App">
         <div className="content">
           <Routes>
