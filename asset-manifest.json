@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/introduce/sjw/static/css/main.1f2835fe.css",
-    "main.js": "/introduce/sjw/static/js/main.d5869442.js",
+    "main.css": "/introduce/sjw/static/css/main.bbb8dcc3.css",
+    "main.js": "/introduce/sjw/static/js/main.6dc140d8.js",
     "static/js/453.b1f132c2.chunk.js": "/introduce/sjw/static/js/453.b1f132c2.chunk.js",
     "static/media/mybatis.png": "/introduce/sjw/static/media/mybatis.36279bcea521f9c2121f.png",
     "static/media/springBoot.png": "/introduce/sjw/static/media/springBoot.7f34ee5e9541865ced65.png",
     "index.html": "/introduce/sjw/index.html",
-    "main.1f2835fe.css.map": "/introduce/sjw/static/css/main.1f2835fe.css.map",
-    "main.d5869442.js.map": "/introduce/sjw/static/js/main.d5869442.js.map",
+    "main.bbb8dcc3.css.map": "/introduce/sjw/static/css/main.bbb8dcc3.css.map",
+    "main.6dc140d8.js.map": "/introduce/sjw/static/js/main.6dc140d8.js.map",
     "453.b1f132c2.chunk.js.map": "/introduce/sjw/static/js/453.b1f132c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f2835fe.css",
-    "static/js/main.d5869442.js"
+    "static/css/main.bbb8dcc3.css",
+    "static/js/main.6dc140d8.js"
   ]
 }
