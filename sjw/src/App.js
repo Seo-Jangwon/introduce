@@ -1,16 +1,14 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Intro from "./components/Intro/Intro";
 import Nav from "./components/Nav/Nav";
 import About from "./components/About/About";
 import WhatCanIDo from "./components/WhatCanIDo/WhatCanIDo";
 import Wish from "./components/Wish/Wish";
 
-const basename = process.env.NODE_ENV === "production" ? "/introduce/sjw" : "";
-
 function App() {
   return (
-    <BrowserRouter basename={basename}>
+    <Router>
       <div className="App">
         <div className="content">
           <Routes>
@@ -22,7 +20,7 @@ function App() {
         </div>
         <Nav />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
