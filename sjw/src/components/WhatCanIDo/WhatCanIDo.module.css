@@ -29,7 +29,7 @@
 .description {
   display: none;
   position: absolute;
-  bottom: -20px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.7);
@@ -43,10 +43,15 @@
 .imageContainer:hover .description {
   display: block;
 }
+
 .imageContainer.visible {
   opacity: 1;
 }
 
 .imageContainer.hidden {
   opacity: 0;
+}
+
+.descriptionLine {
+  display: block;
 }

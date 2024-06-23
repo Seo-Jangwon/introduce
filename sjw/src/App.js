@@ -10,6 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Nav />
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Intro />} />
@@ -18,7 +19,6 @@ function App() {
             <Route path="/wish" element={<Wish />} />
           </Routes>
         </div>
-        <Nav />
       </div>
     </Router>
   );

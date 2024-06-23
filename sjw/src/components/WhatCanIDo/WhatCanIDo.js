@@ -9,7 +9,7 @@ import vue from "../../logos/vue.png";
 import styles from "./WhatCanIDo.module.css"; // CSS 파일을 임포트합니다.
 
 const WhatCanIDo = () => {
-  const skills = useMemo(
+  const primarySkills = useMemo(
     () => [
       {
         src: springBoot,
@@ -24,6 +24,12 @@ const WhatCanIDo = () => {
         description: ["React", "이것도 리액트로 만들었어요"],
       },
       { src: vue, alt: "vue", description: ["Vue"] },
+    ],
+    []
+  );
+
+  const secondarySkills = useMemo(
+    () => [
       {
         src: springData,
         alt: "spring data",
@@ -34,54 +40,59 @@ const WhatCanIDo = () => {
     []
   );
 
-  const [visibleIndices, setVisibleIndices] = useState(new Set());
+  const [visiblePrimary, setVisiblePrimary] = useState(false);
+  const [visibleSecondary, setVisibleSecondary] = useState(false);
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
-      setVisibleIndices((prevIndices) => {
-        const newIndices = new Set(prevIndices);
-        skills.forEach((skill, index) => {
-          if (skill.alt !== "spring data" && skill.alt !== "jwt") {
-            newIndices.add(index);
-          }
-        });
-        return newIndices;
-      });
+      setVisiblePrimary(true);
     }, 1000);
 
     const timer2 = setTimeout(() => {
-      setVisibleIndices((prevIndices) => {
-        const newIndices = new Set(prevIndices);
-        skills.forEach((skill, index) => {
-          if (skill.alt === "spring data" || skill.alt === "jwt") {
-            newIndices.add(index);
-          }
-        });
-        return newIndices;
-      });
+      setVisibleSecondary(true);
     }, 2000);
 
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
     };
-  }, [skills]);
+  }, []);
 
   return (
     <div className={styles.container}>
       <h1>skills</h1>
       <div className={styles.row}>
-        {skills.map((skill, index) => (
+        {primarySkills.map((skill, index) => (
           <div
             key={index}
             className={`${styles.imageContainer} ${
-              visibleIndices.has(index) ? styles.visible : styles.hidden
+              visiblePrimary ? styles.visible : styles.hidden
             }`}
           >
             <img src={skill.src} height="150px" alt={skill.alt} />
             <div className={styles.description}>
               {skill.description.map((line, idx) => (
-                <span key={idx}>
+                <span key={idx} className={styles.descriptionLine}>
+                  {line}
+                  {idx < skill.description.length - 1 && <br />}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className={styles.row}>
+        {secondarySkills.map((skill, index) => (
+          <div
+            key={index}
+            className={`${styles.imageContainer} ${
+              visibleSecondary ? styles.visible : styles.hidden
+            }`}
+          >
+            <img src={skill.src} height="150px" alt={skill.alt} />
+            <div className={styles.description}>
+              {skill.description.map((line, idx) => (
+                <span key={idx} className={styles.descriptionLine}>
                   {line}
                   {idx < skill.description.length - 1 && <br />}
                 </span>
