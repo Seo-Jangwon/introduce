@@ -7,7 +7,7 @@ const Intro = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible([true, true]);
-    }, 1000); // 1초 후에 "서장원입니다."를 보이게 함
+    }, 800);
 
     return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
   }, []);
