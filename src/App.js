@@ -7,7 +7,7 @@ import About from "./components/About/About";
 import WhatCanIDo from "./components/WhatCanIDo/WhatCanIDo";
 import Wish from "./components/Wish/Wish";
 
-const basename = process.env.NODE_ENV === "production" ? "/introduce/sjw" : "";
+const basename = process.env.NODE_ENV === "production" ? "/introduce" : "";
 
 function App() {
   return (
