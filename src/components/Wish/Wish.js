@@ -25,14 +25,17 @@ const Wish = () => {
         <h1>이런 일을 하고 싶어요</h1>
 
         <h3 className={visibleIndex >= 1 ? styles.visible : styles.hidden}>
+          &nbsp;&nbsp;
           <SiSpringboot />
           &nbsp; 백엔드를 희망합니다.
         </h3>
         <h3 className={visibleIndex >= 2 ? styles.visible : styles.hidden}>
+          &nbsp;&nbsp;
           <FaReact />
           &nbsp; 일손이 부족하다면 프론트엔드도 하고 싶습니다.
         </h3>
         <h3 className={visibleIndex >= 3 ? styles.visible : styles.hidden}>
+          &nbsp;&nbsp;
           <AiOutlineComment />
           &nbsp; 코드 리뷰를 빡세게 받아보고 싶습니다.
         </h3>
